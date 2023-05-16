@@ -1,9 +1,11 @@
 require './animal.rb'
+require './foods.rb'
 
 class Dog < Animal
   def initialize(color, name = "unknown")
     super("dog", 4, name)
     @color=color
+    @liked_food = DogFood.new
   end
 
   def bring_a_stick
@@ -15,8 +17,8 @@ class Dog < Animal
   end
 end
 
-dog = Dog.new("black", "Rex")
+# dog = Dog.new("black", "Rex")
 
-dog.bring_a_stick()
+# dog.bring_a_stick()
 
-dog.make_a_web()
+# dog.make_a_web()
